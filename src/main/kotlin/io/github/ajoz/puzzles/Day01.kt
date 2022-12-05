@@ -1,7 +1,10 @@
 import io.github.ajoz.utils.head
+import io.github.ajoz.utils.readInput
 import io.github.ajoz.utils.tail
 
 /**
+ * --- Day 1: Calorie Counting ---
+ *
  * The jungle must be too overgrown and difficult to navigate in vehicles or access from the air; the Elves' expedition
  * traditionally goes on foot. As your boats approach land, the Elves begin taking inventory of their supplies. One
  * important consideration is food - in particular, the number of Calories each Elf is carrying (your puzzle input).
@@ -25,7 +28,6 @@ import io.github.ajoz.utils.tail
  * by the fourth Elf).
  */
 fun main() {
-    // test if implementation meets criteria from the description, like:
     val testInput = readInput("Day01_test")
     check(part1(testInput) == 24000)
 
