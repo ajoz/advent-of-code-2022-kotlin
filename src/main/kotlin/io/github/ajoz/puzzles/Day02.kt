@@ -46,7 +46,7 @@ fun main() {
  *
  * What would your total score be if everything goes exactly according to your strategy guide?
  */
-fun part1(input: List<String>): Int {
+private fun part1(input: List<String>): Int {
     return input.fold(0) { totalScore, inputLine ->
         val (opponentShape, playerShape) = inputLine.split(" ").map { it.toShape() }
         totalScore + playerShape.points + playerShape.getOutcomeFor(opponentShape).points
@@ -71,7 +71,7 @@ fun part1(input: List<String>): Int {
  *
  * Now that you're correctly decrypting the ultra top secret strategy guide, you would get a total score of 12.
  */
-fun part2(input: List<String>): Int {
+private fun part2(input: List<String>): Int {
     return input.fold(0) { totalScore, inputLine ->
         val (opponent, game) = inputLine.split(" ")
         val opponentShape = opponent.toShape()

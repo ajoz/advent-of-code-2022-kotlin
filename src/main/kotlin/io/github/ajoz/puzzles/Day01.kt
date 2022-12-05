@@ -1,3 +1,5 @@
+package io.github.ajoz.puzzles
+
 import io.github.ajoz.utils.head
 import io.github.ajoz.utils.readInput
 import io.github.ajoz.utils.tail
@@ -41,7 +43,7 @@ fun main() {
  *
  * Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?
  */
-fun part1(input: List<String>): Int {
+private fun part1(input: List<String>): Int {
     return input.toCalories().maxByOrNull { it }?.value!!
 }
 
@@ -61,7 +63,7 @@ fun part1(input: List<String>): Int {
  *
  * Find the top three Elves carrying the most Calories. How many Calories are those Elves carrying in total?
  */
-fun part2(input: List<String>): Int {
+private fun part2(input: List<String>): Int {
     return input.toCalories().sortedDescending().take(3).sumOf { it.value }
 }
 
